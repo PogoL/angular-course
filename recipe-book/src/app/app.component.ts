@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isRecipeDisplayed: boolean = true;
+
+  onHeaderClicked(eventData: string) {
+    if (eventData == "Recipe") {
+      this.isRecipeDisplayed = true;
+    } else if (eventData == "ShoppingList") {
+      this.isRecipeDisplayed = false;
+    }
+  }
 }
